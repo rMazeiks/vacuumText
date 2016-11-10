@@ -16,11 +16,11 @@ function process() {
         c = c.replace(/\.\.\./g, "…");// combine 3 dots.
     }
     if ($('input#set-punct').is(':checked')) {
-        c = c.replace(/\s*([\.,!?…])/g, "$1"); // remove spaces before the points
-        c = c.replace(/([\.,!?…])[\.,!?…]+/g, "$1"); // multiple punctuation mark removal
-        c = c.replace(/\n[\.,!?…]/g, "\n");  // delete punct. marks after newline
-        c = c.replace(/([\.,!?…])\s*/g, "$1 ");  // punktuation mark with any spaces to ". " or similar
-        c = c.replace(/[\.,!?] ([a-z])/g, " $1");  // delete punct. marks before small characters. But not "..."
+        c = c.replace(/\s*([\.,!?…;])/g, "$1"); // remove spaces before the points
+        c = c.replace(/([\.,!?…;])[\.,!?…]+/g, "$1"); // multiple punctuation mark removal
+        c = c.replace(/\n[\.,!?…;]/g, "\n");  // delete punct. marks after newline
+        c = c.replace(/([\.,!?…;])\s*/g, "$1 ");  // punktuation mark with any spaces to ". " or similar
+        c = c.replace(/[\.!?] ([a-z])/g, " $1");  // delete punct. marks before small characters. But not "..." and "," or ;
     }
 
     //spaces
