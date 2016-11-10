@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name=”description” content=”Tool for text cleanup, fixing multiple newlines, unusual punctuation marks
+          and similar tecnical errors. Especially for scaned PDF text.”>
+    <meta name="keywords" content="text, cleanup, errors, automatic, scaned, PDF, online tool">
+    <title>Vacuum Text</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="cleaner.js"></script>
+    <link href="style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<div id="header">
+    <table>
+        <tr>
+            <td><h1>Vacuum Text</h1></td>
+            <td><p>Automatically fix/clean text with technical errors.</p></td>
+        </tr>
+    </table>
+</div>
+<div id="content">
+    <table class="workspace">
+        <tr id="toolbar">
+            <td colspan="2">
+            </td>
+        </tr>
+        <tr id="editor">
+            <td>
+                <h2>Your input</h2>
+                <textarea id="input" name="input">You may edit this text...</textarea>
+            </td>
+            <td>
+                <h2>The output</h2>
+                <textarea id="output" name="output" readonly>... and it will be corrected here!</textarea>
+            </td>
+        </tr>
+    </table>
+    <h1>Settings</h1>
+    <ul id="settings">
+        <li><label><input type="checkbox" id="set-three" checked>Keep three dots ... and replace with one
+            character</label></li>
+        <li><label><input type="checkbox" id="set-punct" checked>Fix unusual punctuation mark combinations</label></li>
+        <li><label><input type="checkbox" id="set-space" checked>Fix unusual spaces</label></li>
+        <li><label><input type="checkbox" id="set-mult-nl" checked>Remove multiple newlines</label></li>
+        <li><label><input type="checkbox" id="set-fix-nl" checked>Fix newlines</label></li>
+        <li><label><input type="checkbox" id="set-odd-chars">Remove these rare characters: <, >, @, #</label></li>
+        <li><label><input type="checkbox" id="set-dash" checked>Fix dashes and other lines</label></li>
+        <li><label><input type="checkbox" id="set-quote" checked>Fix qotes</label></li>
+    </ul>
+    <h1>What this is</h1>
+    <p>
+        This is a tool for cleaning up PDF text. Sometimes, when text is recognised in a scanned PDF text, some
+        technical mistakes appear. Lines are ended with a new paragraph mark even when it is still the same paragraph.
+        Although it is not always possible to automatically find these errors, some cases are easy to fix. For example,
+        if a paragraph mark is folowed by a small letter, that means that a new sentence doesn't start and
+        probably it is still the same paragraph. This simple tool is designed to fix just that.
+    </p>
+    <h1>What this is not</h1>
+    <p>
+        This is not a spellchecker. Nor a grammar checker. If a word is written wrong, it wiil not bee corrected :)
+    </p>
+    <h1>How to use it</h1>
+    <p>
+        Enter the input text in the left field. It will be fixed as much as possible and displayed on the right. You can
+        also copy-paste text.
+    </p>
+    <p>
+        The settings can also be changed. If you need a specific combination, you can change what is being fixed. By
+        default, most of the features are enabled.
+    </p>
+</div>
+<div id="footer">
+
+</div>
+</body>
+</html>
