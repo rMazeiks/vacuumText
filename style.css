@@ -56,6 +56,6 @@ body {
 
 }
 
-#settings * {
+.settings * {
     list-style: none;
 }

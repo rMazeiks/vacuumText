@@ -37,17 +37,28 @@
         </tr>
     </table>
     <h1>Settings</h1>
-    <ul id="settings">
+    <ul class="settings">
         <li><label><input type="checkbox" id="set-three" checked>Keep three dots ... and replace with one
             character</label></li>
         <li><label><input type="checkbox" id="set-punct" checked>Fix unusual punctuation mark combinations</label></li>
         <li><label><input type="checkbox" id="set-space" checked>Fix unusual spaces</label></li>
         <li><label><input type="checkbox" id="set-mult-nl" checked>Remove multiple newlines</label></li>
         <li><label><input type="checkbox" id="set-fix-nl" checked>Fix newlines</label></li>
-        <li><label><input type="checkbox" id="set-odd-chars">Remove these rare characters: <, >, @, #</label></li>
         <li><label><input type="checkbox" id="set-dash" checked>Fix dashes and other lines</label></li>
-        <li><label><input type="checkbox" id="set-quote" checked>Fix qotes</label></li>
+        <li><label><input type="checkbox" id="set-quote" checked>Fix quotes</label></li>
     </ul>
+    <details>
+        <summary>Advanced Settings</summary>
+        <ul class="settings">
+            <li><label><input type="checkbox" id="set-odd-chars">Remove all characters exept: spaces and newlines, a-z,
+                A-Z,
+                0-9, ",.;!?' and <input id="set-chars-keep" type="text"></label></li>
+            <li><label><input type="checkbox" id="set-pgs">Remove page numbers that look like this:</label>
+                <input id="set-pgs-pre" type="text" size="3"> #NUMBER
+                <input id="set-pgs-post" type="text" size="3">
+            </li>
+        </ul>
+    </details>
     <h1>What this is</h1>
     <p>
         This is a tool for cleaning up PDF text. Sometimes, when text is recognised in a scanned PDF text, some
