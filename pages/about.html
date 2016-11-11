@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name=”description” content=”Info about how vacuumText works”>
+    <title>How vacuumText works</title>
+    <link href="../style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<div id="header">
+    <table>
+        <tr>
+            <td><h1>Vacuum Text</h1></td>
+            <td><p class="description">Automatically fix/clean text with technical errors.</p></td>
+        </tr>
+    </table>
+</div>
+<div id="content">
+    <h1>The idea</h1>
+    <p> Often, when text is extracted from a scaned PDF, small glitches appear. Spaces and newlines are all over the
+        place and take a long time to delete. Usually these are mistakes that can be fixed by finding-and-replacing, but
+        it still takes time. I was bored finding-and replacing paragraph marks with spaces after recognising scaned
+        text. So I made a tool that would make life easier. It automates some syntactical corrections that scanned text
+        might need. If a paragraph doesn't start with a capital letter, it is not a paragraph.</p>
+    <h1>How it works</h1>
+    <p> It uses regular expressions to fix common mistakes. For example double spaces are replaced by single spaces
+        using regex in javacscript. The code can be seen <a href="../cleaner.js">here</a>. </p>
+</div>
+<div id="footer">
+
+</div>
+</body>
+</html>
